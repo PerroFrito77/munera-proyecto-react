@@ -1,0 +1,1283 @@
+/* =========================================================
+   TURTLE INC - ESTILOS GLOBALES Y MÓDULOS DE COMPONENTES
+   Migrado fielmente desde html-referencia
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Luckiest Guy', cursive, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --- HEADER SUPERIOR --- */
+.site-header {
+  background: linear-gradient(90deg, #FFD700, #81C784);
+  color: white;
+  padding: 8px 15px;
+  text-align: center;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.25);
+}
+
+/* --- NAVBAR PRINCIPAL --- */
+.navbar {
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #222;
+  padding: 12px 25px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar .container-fluid {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+
+.navbar-brand:hover {
+  color: #ffd000;
+}
+
+/* Buscador */
+.busqueda {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.busqueda input {
+  width: 220px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 20px 0 0 20px;
+  outline: none;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  background: white;
+  color: #222;
+}
+
+.busqueda button {
+  padding: 8px 15px;
+  border: none;
+  background: #ffd000;
+  color: black;
+  cursor: pointer;
+  border-radius: 0 20px 20px 0;
+  font-weight: bold;
+  font-size: 15px;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.busqueda button:hover {
+  background: #ffb700;
+  transform: scale(1.05);
+}
+
+/* Menú de opciones */
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  color: white !important;
+  text-decoration: none;
+  padding: 8px 14px;
+  transition: 0.3s;
+  font-size: 1.05rem;
+  border-radius: 6px;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #ffc107 !important;
+}
+
+.boton-carrito {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
+  padding: 8px 12px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: 0.3s;
+  position: relative;
+}
+
+.boton-carrito:hover {
+  background-color: #ffd000;
+  color: #222;
+  transform: scale(1.1);
+}
+
+.carrito-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #e53935;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- FOOTER --- */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 18px 0;
+  width: 100%;
+  margin-top: auto;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+}
+
+/* --- VISTA: INICIO / HOME --- */
+.contenido {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 35px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  line-height: 1.8;
+  text-align: center;
+}
+
+.contenido h2 {
+  text-align: center;
+  color: #2e8b57;
+  font-size: 2.1rem;
+  margin-bottom: 25px;
+}
+
+.contenido p {
+  font-size: 1.15rem;
+  color: #444;
+  margin-bottom: 18px;
+  text-align: justify;
+}
+
+.contenido strong {
+  color: #1b5e20;
+  font-size: 1.2rem;
+}
+
+/* --- VISTA: PRENDAS (SELECTOR DE CATEGORÍA) --- */
+.Botones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin: 60px auto;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  padding: 0 20px;
+}
+
+.card-prenda {
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 360px;
+  text-align: center;
+}
+
+.card-prenda:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.card-prenda img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
+.texto-boton {
+  padding: 20px;
+}
+
+.texto-boton h2 {
+  color: #2e8b57;
+  font-size: 1.6rem;
+  margin: 0 0 8px 0;
+}
+
+.texto-boton p {
+  color: #666;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* --- VISTA: CATÁLOGO DE PRODUCTOS (MASCULINO / FEMENINO) --- */
+.productos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 1024px) {
+  .productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .productos {
+    grid-template-columns: 1fr;
+  }
+}
+
+.producto {
+  background: white;
+  border-radius: 14px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  text-align: center;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.producto img {
+  width: 100%;
+  height: 260px;
+  object-fit: contain;
+  background-color: #fafafa;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.producto h3 {
+  font-size: 1.15rem;
+  color: #222;
+  margin: 10px 0 5px 0;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.producto .precio {
+  font-size: 1.35rem;
+  color: #2e8b57;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.producto .proximamente {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #ffd000;
+  color: #222;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.producto .nuevo {
+  color: #e53935;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* --- VISTA: DETALLE DE PRODUCTO --- */
+.detalle-producto {
+  display: flex;
+  gap: 50px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+@media (max-width: 868px) {
+  .detalle-producto {
+    flex-direction: column;
+  }
+}
+
+.galeria {
+  width: 55%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 868px) {
+  .galeria {
+    width: 100%;
+  }
+}
+
+.galeria img {
+  width: 100%;
+  height: 280px;
+  object-fit: contain;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.galeria img:hover {
+  transform: scale(1.02);
+}
+
+.info-detalle {
+  width: 45%;
+}
+
+@media (max-width: 868px) {
+  .info-detalle {
+    width: 100%;
+  }
+}
+
+.info-detalle .codigo {
+  color: gray;
+  font-size: 0.95rem;
+  margin: 0 0 5px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.info-detalle h1 {
+  font-size: 2.2rem;
+  margin: 5px 0 10px 0;
+  color: #222;
+}
+
+.info-detalle h2 {
+  font-size: 1.8rem;
+  color: #2e8b57;
+  margin: 0 0 15px 0;
+}
+
+.info-detalle hr {
+  border: 0;
+  height: 1px;
+  background: #ddd;
+  margin: 15px 0;
+}
+
+.info-detalle p {
+  font-family: 'Poppins', sans-serif;
+  color: #555;
+  line-height: 1.6;
+}
+
+.tallas {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.tallas button {
+  width: 55px;
+  height: 45px;
+  border: 2px solid #000;
+  background: white;
+  cursor: pointer;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.tallas button:hover, .tallas button.active {
+  background: #000;
+  color: white;
+}
+
+.boton1, .boton2 {
+  width: 100%;
+  padding: 15px;
+  margin-top: 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-family: 'Luckiest Guy', cursive;
+  border-radius: 8px;
+  transition: 0.2s;
+  display: block;
+  text-align: center;
+}
+
+.boton1 {
+  background: white;
+  border: 2px solid #000;
+  color: #000;
+}
+
+.boton1:hover {
+  background: #ffd000;
+  border-color: #ffd000;
+}
+
+.boton2 {
+  background: #3b4633;
+  color: white;
+}
+
+.boton2:hover {
+  background: #283023;
+}
+
+.beneficios {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  color: #555;
+  font-family: 'Poppins', sans-serif;
+}
+
+.beneficios .card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: left;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+  transition: 0.3s;
+}
+
+.beneficios .card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.beneficios .card h3 {
+  margin: 0 0 8px 0;
+  color: #222;
+  font-size: 16px;
+  font-family: 'Luckiest Guy', cursive;
+}
+
+.beneficios .card p {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+.beneficios .card ul {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 0.88rem;
+}
+
+.beneficios .card li {
+  margin-bottom: 4px;
+}
+
+.beneficios .card-grande {
+  grid-column: span 2;
+}
+
+/* --- VISTA: CARRITO --- */
+.carrito {
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.volver {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #2e8b57;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.volver:hover {
+  text-decoration: underline;
+}
+
+.carrito h2 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.producto-carrito {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+  border-bottom: 1px solid #eee;
+  gap: 15px;
+}
+
+.producto-carrito img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #f8f8f8;
+}
+
+.producto-info {
+  flex: 1;
+}
+
+.producto-info h3 {
+  margin: 0 0 6px 0;
+  font-size: 1.15rem;
+  color: #222;
+}
+
+.producto-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #777;
+  font-family: 'Poppins', sans-serif;
+}
+
+.producto-carrito .precio {
+  font-size: 1.3rem;
+  color: #2e8b57;
+  font-weight: bold;
+}
+
+.cantidad {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cantidad button {
+  width: 32px;
+  height: 32px;
+  background: #eee;
+  border: none;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+.cantidad button:hover {
+  background: #ffd000;
+}
+
+.cantidad span {
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+  min-width: 20px;
+  text-align: center;
+}
+
+.eliminar {
+  background: transparent;
+  border: none;
+  color: #e53935;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 6px;
+  transition: 0.2s;
+}
+
+.eliminar:hover {
+  transform: scale(1.2);
+}
+
+.total {
+  font-size: 1.6rem;
+  margin: 30px 0 20px;
+  text-align: right;
+  color: #222;
+}
+
+.total strong {
+  color: #2e8b57;
+  margin-left: 10px;
+}
+
+.comprar {
+  width: 100%;
+  padding: 16px;
+  background: #2e8b57;
+  color: white;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-family: 'Luckiest Guy', cursive;
+  box-shadow: 0 4px 10px rgba(46, 139, 87, 0.3);
+}
+
+.comprar:hover {
+  background: #246e45;
+  transform: translateY(-2px);
+}
+
+/* --- VISTA: CAPARAZONES (PUNTOS & CANJE) --- */
+.contenedor-caparazones {
+  display: flex;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.contenedor-caparazones .info-caparazones,
+.contenedor-caparazones .recompensas-resumen {
+  flex: 1;
+  min-width: 320px;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.contenedor-caparazones h2 {
+  color: #2e8b57;
+  font-size: 1.8rem;
+  margin-top: 0;
+  text-align: center;
+}
+
+.contenedor-caparazones p {
+  font-family: 'Poppins', sans-serif;
+  color: #555;
+  line-height: 1.7;
+}
+
+.recompensas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+@media (max-width: 650px) {
+  .recompensas-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.recompensa-card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+  border: 2px solid #e0f2f1;
+}
+
+.recompensa-card h2 {
+  color: #2e8b57;
+  font-size: 1.4rem;
+  margin: 0 0 10px 0;
+}
+
+.recompensa-card h3 {
+  color: #555;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  margin: 0 0 20px 0;
+}
+
+.btn-canjear {
+  background: #ffd000;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 20px;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-canjear:hover {
+  background: #ffb700;
+  transform: scale(1.05);
+}
+
+/* Modales */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(35, 45, 50, 0.65);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1000;
+  animation: fadeIn 0.25s ease;
+}
+
+.modal-contenido {
+  width: 400px;
+  max-width: 100%;
+  background: white;
+  border-radius: 28px;
+  padding: 35px 25px;
+  text-align: center;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+  animation: aparecer 0.35s ease;
+}
+
+.modal-icono {
+  width: 75px;
+  height: 75px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: #e3f6eb;
+  color: #2e8b57;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+}
+
+.modal-subtitulo {
+  color: #35a976;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  display: block;
+  margin-bottom: 8px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.modal-titulo {
+  color: #46535e;
+  font-size: 24px;
+  margin: 0 0 15px 0;
+}
+
+.modal-texto {
+  color: #89959d;
+  font-size: 14px;
+  line-height: 1.7;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-aceptar {
+  width: 100%;
+  margin-top: 23px;
+  padding: 14px;
+  border: none;
+  border-radius: 13px;
+  background: #46535e;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-aceptar:hover {
+  background: #35414a;
+  transform: translateY(-2px);
+}
+
+/* --- VISTA: GUÍA DE MEDIDAS --- */
+.guia-medidas {
+  max-width: 800px;
+  margin: 30px auto 60px;
+  background: white;
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.guia-medidas h2 {
+  color: #2e8b57;
+  font-size: 1.9rem;
+  margin-top: 0;
+}
+
+.imagen-guia img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+.guia-medidas table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.guia-medidas th, .guia-medidas td {
+  padding: 12px 16px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.guia-medidas th {
+  background-color: #f7f7f7;
+  color: #2e8b57;
+  font-weight: 600;
+}
+
+.guia-medidas tr:hover td {
+  background-color: #fafafa;
+}
+
+/* --- VISTA: SEGUIMIENTO EN VIVO --- */
+.telefono-mockup {
+  width: 380px;
+  max-width: 100%;
+  margin: 40px auto;
+  background: white;
+  border-radius: 36px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  border: 10px solid #222;
+  overflow: hidden;
+  text-align: left;
+}
+
+.barra-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  background: #fdfdfd;
+}
+
+.contenido-seguimiento {
+  padding: 20px 25px 30px;
+}
+
+.tortuga-icon {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.marca-mini {
+  font-size: 11px;
+  color: #299367;
+  letter-spacing: 2px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+}
+
+.titulo-tracking {
+  font-size: 1.6rem;
+  color: #222;
+  text-align: center;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+}
+
+.mapa-tracking {
+  height: 160px;
+  background: #e8f5e9;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.mapa-tracking .ruta {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  right: 15%;
+  height: 4px;
+  background: #81c784;
+  border-radius: 2px;
+}
+
+.mapa-tracking .pin {
+  position: absolute;
+  top: 42%;
+  left: 55%;
+  font-size: 20px;
+  color: #299367;
+  animation: bounce 1.2s infinite alternate;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-8px); }
+}
+
+.estado-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+}
+
+.pulso-indicador {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ff9800;
+  position: relative;
+}
+
+.pulso-indicador::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid #ff9800;
+  animation: pulseAnim 1.4s infinite;
+}
+
+.pulso-indicador.completo {
+  background: #299367;
+}
+
+.pulso-indicador.completo::after {
+  border-color: #299367;
+}
+
+@keyframes pulseAnim {
+  0% { transform: scale(0.9); opacity: 1; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+.progreso-steps {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 0;
+  position: relative;
+}
+
+.paso-track {
+  text-align: center;
+  z-index: 2;
+  font-family: 'Poppins', sans-serif;
+}
+
+.paso-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #eee;
+  color: #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin: 0 auto 6px;
+}
+
+.paso-track.activo .paso-circle {
+  background: #299367;
+  color: white;
+}
+
+.paso-track small {
+  font-size: 11px;
+  color: #666;
+  display: block;
+}
+
+.btn-llego {
+  width: 100%;
+  padding: 14px;
+  background: #299367;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-family: 'Luckiest Guy', cursive;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: 0.2s;
+}
+
+.btn-llego:hover {
+  background: #207350;
+}
+
+.btn-volver-subtle {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  color: #666;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* --- VISTAS: FORMULARIOS (PEDIDO, PERFIL, LOGIN, REGISTRO, PAGOS) --- */
+.form-card {
+  max-width: 550px;
+  margin: 40px auto;
+  background: white;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.form-card h2 {
+  color: #2e8b57;
+  font-size: 1.8rem;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.form-card .subtitulo {
+  text-align: center;
+  color: #666;
+  font-family: 'Poppins', sans-serif;
+  margin: 0 0 25px 0;
+  font-size: 0.95rem;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #2e8b57;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 14px;
+  background: #2e8b57;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-family: 'Luckiest Guy', cursive;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 0 3px 10px rgba(46,139,87,0.3);
+}
+
+.btn-primary:hover {
+  background: #246e45;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  width: 100%;
+  padding: 12px;
+  background: white;
+  color: #444;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  font-family: 'Luckiest Guy', cursive;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.2s;
+}
+
+.btn-secondary:hover {
+  background: #f0f0f0;
+}
+
+.btn-danger {
+  width: 100%;
+  padding: 14px;
+  background: #e53935;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-family: 'Luckiest Guy', cursive;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-danger:hover {
+  background: #c62828;
+}
+
+.alert-box {
+  padding: 14px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+.alert-warning {
+  background: #fff3e0;
+  border-left: 4px solid #ff9800;
+  color: #b75300;
+}
+
+.alert-success {
+  background: #e8f5e9;
+  border-left: 4px solid #4caf50;
+  color: #2e7d32;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
