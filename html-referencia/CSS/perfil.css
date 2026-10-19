@@ -1,0 +1,184 @@
+header{
+    background: linear-gradient(90deg, #FFD700, #81C784);
+    color:white;
+    padding:10px 0;
+    text-align:center;
+}
+
+body{
+    font-family:'luckiest Guy',cursive;
+    margin:0;
+    padding:0;
+    background-color:#f4f4f4;
+}
+
+
+
+/* Barra de navegación */
+.navbar{
+    box-shadow:0 3px 10px rgba(0,0,0,0.3);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background-color:#222;
+    padding:15px 30px;
+}
+
+.navbar{
+    box-shadow:0 3px 10px rgba(0,0,0,0.3);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background-color:#222;
+    padding:15px 30px;
+}
+
+/* Contenedor principal */
+.container-fluid{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+/* Logo */
+.navbar-brand{
+    font-size:1.5rem;
+    font-weight:bold;
+    color:white;
+    text-decoration:none;
+}
+
+/* Contenedor de opciones */
+.navbar-collapse{
+    display:flex;
+}
+
+/* Opciones del menú en horizontal */
+.navbar-nav{
+    display:flex;
+    flex-direction:row;
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+/* Cada opción */
+.nav-item{
+    margin-left:15px;
+}
+
+/* Enlaces */
+.nav-link{
+    color:white !important;
+    text-decoration:none;
+    padding:10px 15px;
+    transition:0.3s;
+}
+
+.nav-link:hover{
+    color:#ffc107 !important;
+}
+
+.perfil-info h2{
+    text-align:center;
+    margin-top:20px;
+    color:#333;
+}
+
+footer{
+    background-color:#222;
+    color:white;
+    text-align:center;
+    padding:15px 0;
+    position:center;
+    bottom:0;
+    width:100%;
+}
+
+.contenido p{
+    text-align:center;
+    margin:13px 0;
+    color:#666;
+}
+
+.perfil-info img{
+    display:block;
+    margin:20px auto;
+    border-radius:50%;
+    width:150px;
+    height:150px;
+}
+
+.perfil-info{
+    text-align: center;
+    background: white;
+    width: 450px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+}
+
+.perfil-info img{
+    border-radius: 50%;
+    margin: 20px 0;
+}
+
+.botones{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+   
+}
+
+.botones button{
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg,#FFD700,#81C784);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s;
+     font-family: 'lukiest guy', cursive;
+}
+
+
+button:hover {
+    color: #ffee07;
+}
+.encabezado { 
+    background: linear-gradient(90deg, #FFD700, #81C784); 
+    color: white; 
+    padding: 20px; 
+    text-align: center; 
+    position: relative; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.encabezado h1 {
+    margin: 0;
+}
+
+.boton-carrito {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    padding: 8px 12px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.boton-carrito:hover {
+    background-color: #ffd000;
+    transform: scale(1.1);
+}
